@@ -1,6 +1,6 @@
 {
-  "name": "starwars-names",
-  "version": "1.0.0",
+  "name": "jbm-starwars-names",
+  "version": "1.0.1",
   "description": "Random Star Wars names.",
   "main": "src/index.js",
   "scripts": {
