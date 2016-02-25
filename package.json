@@ -1,41 +1,46 @@
 {
-    "name": "jbm-starwars-names",
-    "version": "0.0.0-semantically-released",
-    "description": "Random Star Wars names.",
-    "main": "src/index.js",
-    "scripts": {
-        "commit": "git-cz",
-        "test": "mocha src/index.test.js",
-        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  "name": "jbm-starwars-names",
+  "version": "0.0.0-semantically-released",
+  "description": "Random Star Wars names.",
+  "main": "src/index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js",
+    "test:watch": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbmcewan/starwars-names.git"
+  },
+  "keywords": [
+    "random",
+    "star",
+    "wars"
+  ],
+  "author": "'J.B.McEwan' <'john.mcewan@comcast.net'>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbmcewan/starwars-names/issues"
+  },
+  "homepage": "https://github.com/jbmcewan/starwars-names#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.5.0",
+    "cz-conventional-changelog": "1.1.5",
+    "ghooks": "1.0.3",
+    "mocha": "2.4.5",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jbmcewan/starwars-names.git"
-    },
-    "keywords": [
-        "random",
-        "star",
-        "wars"
-    ],
-    "author": "'J.B.McEwan' <'john.mcewan@comcast.net'>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/jbmcewan/starwars-names/issues"
-    },
-    "homepage": "https://github.com/jbmcewan/starwars-names#readme",
-    "dependencies": {
-        "unique-random-array": "1.0.0"
-    },
-    "devDependencies": {
-        "chai": "3.5.0",
-        "commitizen": "2.5.0",
-        "cz-conventional-changelog": "1.1.5",
-        "mocha": "2.4.5",
-        "semantic-release": "^4.3.5"
-    },
-    "config": {
-        "commitizen": {
-            "path": "node_modules/cz-conventional-changelog"
-        }
+    "ghooks": {
+        "pre-commit" : "npm run test"
     }
+  }
 }
