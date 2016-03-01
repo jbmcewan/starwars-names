@@ -1,6 +1,6 @@
 /* global describe, it */
 var expect = require('chai').expect;
-var starWars = require('./index');
+var starWars = require('../dist/index');
 
 describe('jbm-starwars-names', function(){
     describe('all', function() {
