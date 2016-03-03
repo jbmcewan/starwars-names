@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "name": "jbm-starwars-names",
     "version": "0.0.0-semantically-released",
     "description": "Random Star Wars names.",
@@ -52,5 +51,6 @@
         },
         "ghooks": {
             "pre-commit": "npm run test"
+        }
     }
 }
