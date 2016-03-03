@@ -13,11 +13,11 @@ before_script:
   - npm prune
 script:
   - npm run build
-  - npm run test
-  - npm run check-coverage
+  - npm run coverage-generate
+  - npm run coverage-check
 after_success:
   - npm run semantic-release
-  - npm run report-coverage
+  - npm run coverage-report
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
