@@ -1,6 +1,6 @@
 /* global describe, it */
-import {expect} from  'chai';
-import starWars from '../src/index';
+import {expect} from 'chai';
+import starWars from './index';
 
 describe('jbm-starwars-names', function(){
     describe('all', function() {
